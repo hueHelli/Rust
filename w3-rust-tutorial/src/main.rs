@@ -73,4 +73,13 @@ fn main() {
     println!("Is regular user: {}", logged_in && !is_admin);
     println!("Has any access: {}", logged_in || is_admin);
     println!("Not logged in: {}", !logged_in);
+
+    // If / Else
+    let is_logged_in = true;
+
+    if is_logged_in {
+        println!("Welcome back!");
+    } else {
+        println!("Please log in.");
+    }
 }
