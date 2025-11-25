@@ -20,4 +20,8 @@ fn main() {
     // Booleans
     let is_logged_in: bool = true;
     println!("User logged in? {}", is_logged_in);
+
+    // Constants (must have a type)
+    const PI: f64 = 3.1415; // Declaring constants with uppercase is good practise
+    println!("Pi: {}", PI);
 }
