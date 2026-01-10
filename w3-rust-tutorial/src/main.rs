@@ -170,6 +170,9 @@ fn main() {
     say_hello();
     greet("Aaron");
     println!("Sum is: {}", sum(3, 5));
+
+    // Scope: Values only accessible on same or deeper layer.
+    // If the a new variable with the same name on a deeper layer is declared, the initial variable isn't affected
 }
 
 fn say_hello() {
