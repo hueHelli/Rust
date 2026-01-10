@@ -114,6 +114,30 @@ fn main() {
     user.age = 36; // Change value of age
     println!("Name: {}", user.name);
     println!("Updated age: {}", user.age);
+
+    // Enums
+    enum Direction {
+        Up,
+        Down,
+        Left,
+        Right,
+    }
+    let my_direction = Direction::Up;
+    println!("We are going up!");
+
+    // Enum variants can also hold data
+    enum LoginStatus {
+        Success(String),
+        Error(String),
+    }
+
+    let result1 = LoginStatus::Success(String::from("Welcome, John!"));
+    let result2 = LoginStatus::Error(String::from("Incorrect password"));
+
+    match result1 {
+        LoginStatus::Success(message) => println!("Success: {}", message),
+        LoginStatus::Error(message) => println!("Error: {}", message),
+    }
 }
 
 fn get_user() -> (String, i32) {
