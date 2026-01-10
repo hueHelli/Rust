@@ -74,6 +74,7 @@ fn main() {
     println!("Has any access: {}", logged_in || is_admin);
     println!("Not logged in: {}", !logged_in);
 
+    // Control Structures
     // If / Else
     let is_logged_in: bool = true;
 
@@ -86,6 +87,7 @@ fn main() {
     let is_allowed: &str = if is_logged_in { "Yes" } else { "No" };
     println!("{}", is_allowed);
 
+    // Match
     let day: i32 = 4;
 
     match day {
@@ -118,6 +120,8 @@ fn main() {
 
     println!("{}", result);
 
+    // Loops
+    // Loop
     let mut count = 1;
     loop {
         println!("Hello World!");
@@ -141,6 +145,7 @@ fn main() {
     };
     println!("The loop stopped at: {}", result);
 
+    // While
     count = 1;
     while count <= 5 {
         println!("Count: {}", count);
@@ -152,6 +157,7 @@ fn main() {
     }
     // You can also use break and continue for While-Loops
 
+    // For
     for i in 1..6 {
         println!("i is: {}", i);
     }
@@ -159,4 +165,23 @@ fn main() {
         println!("i is: {}", i);
     }
     // You can also use break and continue for For-Loops
+
+    // Functions
+    say_hello();
+    greet("Aaron");
+    println!("Sum is: {}", sum(3, 5));
+}
+
+fn say_hello() {
+    println!("Hello from a function")
+}
+
+fn greet(name: &str) {
+    println!("Hello {}", name)
+}
+
+fn sum(a: i32, b: i32) -> i32 {
+    return a + b;
+    // Would work theoretically as well, but I don't like it
+    // a + b // Without return and without semicolon
 }
