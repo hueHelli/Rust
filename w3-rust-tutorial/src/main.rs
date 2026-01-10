@@ -194,6 +194,17 @@ fn main() {
     // You can also use + but it's cleaner with format!()
     // Use len() for the length of a String
     let result_length = result.len();
+
+    // Ownership
+    let a = String::from("Hello");
+    let b = a;
+    // println!("{}", a); Error: a no longer owns the value
+    println!("{}", b); // Ok: b now owns the value 
+
+    let a = String::from("Hello");
+    let b = a.clone(); // Now both have the same value
+    println!("a = {}", a); // Works
+    println!("b = {}", b); // Works 
 }
 
 fn say_hello() {
