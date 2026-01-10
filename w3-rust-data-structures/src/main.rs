@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     // Arrays
     // Arrays are lists of a fixed value that can't be changed in size
@@ -54,6 +56,34 @@ fn main() {
     // You can also return a Tuple from a function
     let user = get_user();
     println!("User: {} ({} years old)", user.0, user.1);
+
+    // HashMap
+    // HashMaps are collections of key/value pairs
+    // To use HashMap, you must import it: use std::collections::HashMap;
+    // Create a HashMap called capitalCities
+    let mut capitalCities = HashMap::new();
+
+    // Add keys and values (Country, City)
+    capitalCities.insert("England", "London");
+    capitalCities.insert("Germany", "Berlin");
+    capitalCities.insert("Norway", "Oslo");
+    println!("{:?}", capitalCities);
+
+    // You can access values using get()
+    if let Some(city) = capitalCities.get("England") {
+        println!("The capital of England is {}.", city);
+    } else {
+        println!("England is not in the map.");
+    }
+    // If you assign a new value to an already existing key the old value gets overridden
+    // You can remove a key using remove()
+    capitalCities.remove("England");
+    println!("{:?}", capitalCities);
+
+    // You can also loop through HashMaps
+    for (country, city) in &capitalCities {
+        println!("The capital of {} is {}.", country, city);
+    }
 }
 
 fn get_user() -> (String, i32) {
