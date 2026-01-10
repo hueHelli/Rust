@@ -84,6 +84,36 @@ fn main() {
     for (country, city) in &capitalCities {
         println!("The capital of {} is {}.", country, city);
     }
+
+    // Struct
+    // Structs are like classes
+    struct Person {
+        name: String,
+        age: u32,
+        can_vote: bool,
+    }
+
+    // Create a Person object
+    let user = Person {
+        name: String::from("John"),
+        age: 35,
+        can_vote: true,
+    };
+
+    // Access and print the values
+    println!("Name: {}", user.name);
+    println!("Age: {}", user.age);
+    println!("Can vote? {}", user.can_vote);
+
+    // When you want to change a field, you must make the object mutable but no the field
+    let mut user = Person {
+        name: String::from("John"),
+        age: 35,
+    };
+
+    user.age = 36; // Change value of age
+    println!("Name: {}", user.name);
+    println!("Updated age: {}", user.age);
 }
 
 fn get_user() -> (String, i32) {
