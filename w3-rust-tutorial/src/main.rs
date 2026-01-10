@@ -1,3 +1,5 @@
+use std::fmt::format;
+
 fn main() {
     // Strings
     let mut name: &str = "Aaron"; // mut to make the variable "mutable"(changeble)
@@ -173,6 +175,25 @@ fn main() {
 
     // Scope: Values only accessible on same or deeper layer.
     // If the a new variable with the same name on a deeper layer is declared, the initial variable isn't affected
+
+    // Strings
+    // &str is for strings that don't change
+    // String is for strings that can change
+    let text1: String = "Hello World".to_string();
+    let text2: String = String::from("Hello World");
+
+    // Use push_str() to add text to a string
+    // Use push() to add a single char to a string
+    let mut greeting: String = String::from("Hello");
+    greeting.push_str(" World");
+
+    // You can combine strings with the format!() macro, similar to print!()
+    let text1: String = String::from("Hello");
+    let text2: String = String::from("World");
+    let result: String = format!("{} {}", text1, text2); // Hello World
+    // You can also use + but it's cleaner with format!()
+    // Use len() for the length of a String
+    let result_length = result.len();
 }
 
 fn say_hello() {
