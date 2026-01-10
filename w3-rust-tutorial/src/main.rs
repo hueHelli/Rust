@@ -151,4 +151,12 @@ fn main() {
         println!("This won't be printed.");
     }
     // You can also use break and continue for While-Loops
+
+    for i in 1..6 {
+        println!("i is: {}", i);
+    }
+    for i in 1..=6 {
+        println!("i is: {}", i);
+    }
+    // You can also use break and continue for For-Loops
 }
