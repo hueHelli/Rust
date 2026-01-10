@@ -139,6 +139,16 @@ fn main() {
 
         count += 1;
     };
-
     println!("The loop stopped at: {}", result);
+
+    count = 1;
+    while count <= 5 {
+        println!("Count: {}", count);
+        count += 1;
+    }
+
+    while count <= 5 {
+        println!("This won't be printed.");
+    }
+    // You can also use break and continue for While-Loops
 }
