@@ -34,4 +34,28 @@ fn main() {
     println!("{:?}", fruits); // ["banana", "orange"]
 
     // When you loop through a Vector you should use a reference, so you can still use it later
+
+    // Tuples
+    // Tuples are like Arrays (not resizable) but with different types
+    // Tuples are written using parentheses (), with values separated by commas
+    let person = ("John", 30, true);
+    // For accessing tuple values you can use a . followed by the index
+    println!("Name: {}", person.0);
+    println!("Age: {}", person.1);
+    println!("Is active: {}", person.2);
+    // You can also "unpack" a tuple (like destructuring in JavaScript)
+    let person = ("Jenny", 45, false);
+    let (name, age, active) = person;
+
+    println!("Name: {}", name);
+    println!("Age: {}", age);
+    println!("Active: {}", active);
+
+    // You can also return a Tuple from a function
+    let user = get_user();
+    println!("User: {} ({} years old)", user.0, user.1);
+}
+
+fn get_user() -> (String, i32) {
+    (String::from("Liam"), 25)
 }
